@@ -1,0 +1,44 @@
+--- settings.xml
++++ settings.xml
+@@ -1,28 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?> 
+-<java version="1.6.0_13" class="java.beans.XMLDecoder"> 
++<java version="1.6.0_14" class="java.beans.XMLDecoder"> 
+  <object class="installdb.nodes.ServersList"> 
+   <void method="add"> 
+    <object class="installdb.nodes.ServerNodeRow"> 
+-    <void method="add"> 
+-     <object class="installdb.nodes.BaseNodeRow"> 
+-      <void property="caption"> 
+-       <string>mine</string> 
+-      </void> 
+-      <void property="crDbUserPassw"> 
+-       <string>5CC83D904B8A5654</string> 
+-      </void> 
+-      <void property="dbName"> 
+-       <string>mine</string> 
+-      </void> 
+-      <void property="dbUserName"> 
+-       <string>miner</string> 
+-      </void> 
+-      <void id="charArray0" property="dbUserPassw"/> 
+-      <void property="dbUserPassw"> 
+-       <object idref="charArray0"/> 
+-      </void> 
+-     </object> 
+-    </void> 
+     <void property="caption"> 
+      <string>localhost</string> 
+     </void> 
+@@ -32,9 +12,9 @@
+     <void property="host"> 
+      <string>localhost</string> 
+     </void> 
+-    <void id="charArray1" property="password"/> 
++    <void id="charArray0" property="password"/> 
+     <void property="password"> 
+-     <object idref="charArray1"/> 
++     <object idref="charArray0"/> 
+     </void> 
+     <void property="port"> 
+      <int>5432</int> 

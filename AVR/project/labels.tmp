@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega8</DEVICE>
+ <WORKING_DIR>D:\project</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\Program Files\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\partp\main.S</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\partp\m8def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\project\HelloLCD.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>D:\project\HelloLCD.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>D:\project\HelloLCD.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>D:\partp\main.S</FILE><LINE>11</LINE></start>
+  <init><FILE>D:\partp\main.S</FILE><LINE>79</LINE></init>
+  <dout><FILE>D:\partp\main.S</FILE><LINE>120</LINE></dout>
+  <cout><FILE>D:\partp\main.S</FILE><LINE>109</LINE></cout>
+  <main><FILE>D:\partp\main.S</FILE><LINE>72</LINE></main>
+  <pau2><FILE>D:\partp\main.S</FILE><LINE>218</LINE></pau2>
+  <pau2000><FILE>D:\partp\main.S</FILE><LINE>225</LINE></pau2000>
+  <pau><FILE>D:\partp\main.S</FILE><LINE>211</LINE></pau>
+  <pout><FILE>D:\partp\main.S</FILE><LINE>133</LINE></pout>
+  <delay><FILE>D:\partp\main.S</FILE><LINE>232</LINE></delay>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="manager" namespace="/manager" extends="struts-default">
+
+
+
+        <action name="users">
+            <result>/dw/users.jsp</result>
+        </action>
+
+        <action name="addUser" class="ips.iprmanager.struts.EditUser" method="addUser">
+            <result name="input">/dw/opUser.jsp</result>
+        </action>
+        
+        <action name="editUser" class="ips.iprmanager.struts.EditUser" method="editUser">
+            <result name="input">/dw/opUser.jsp</result>
+        </action>
+
+        <action name="delUser" class="ips.iprmanager.struts.EditUser" method="delUser">
+            <result name="input">/dw/opUser.jsp</result>
+        </action>
+
+        <action name="opUser" class="ips.iprmanager.struts.EditUser">
+            <result name="input">/dw/opUser.jsp</result>
+            <result name="error">/dw/opUser.jsp</result>
+            <result name="success" type="redirect">users.action</result>
+        </action>
+
+
+
+
+        <action name="roles">
+            <result>/dw/roles.jsp</result>
+        </action>
+
+        <action name="addRole" class="ips.iprmanager.struts.EditRole" method="addRole">
+            <result name="input">/dw/opRole.jsp</result>
+        </action>
+        
+        
+        <action name="editRole" class="ips.iprmanager.struts.EditRole" method="editRole">
+            <result name="input">/dw/opRole.jsp</result>
+        </action>
+
+        <action name="delRole" class="ips.iprmanager.struts.EditRole" method="delRole">
+            <result name="input">/dw/opRole.jsp</result>
+        </action>
+
+
+        <action name="opRole" class="ips.iprmanager.struts.EditRole">
+            <result name="input">/dw/opRole.jsp</result>
+            <result name="error">/dw/opRole.jsp</result>
+            <result name="success" type="redirect">roles.action</result>
+        </action>
+        
+
+
+
+        <action name="close_session">
+            <result>/CloseSession</result>
+        </action>
+
+    </package>
+</struts>

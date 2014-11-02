@@ -1,0 +1,79 @@
+(select 0 as rang, 'Кассовые операции' as rang_descr,
+	o.id, o.order_date, o.operation_type_code, ot.description as operation_description,
+	0 as product_group_id , 'Касса' as product_group_name, 
+	0 as product_id, 'у.е.' as product_name, '' as scod,
+	i.actual_price, 1 as quantity, i.actual_price as summ, o.description
+
+from orders o, items i, orders_operations_types ot
+where o.id = i.orders_id and o.operation_type_code = ot.type_code 
+	and o.id < 563 and o.id > 0
+	and o.operation_type_code in ('mpl','mmn')
+order by o.order_date)
+
+union
+
+(select 1 as rang, 'Прихо товара' as rang_descr,
+	o.id, o.order_date, o.operation_type_code, ot.description as operation_description,
+	pg.id as product_group_id , pg."name" as product_group_name, 
+	i.products_id as product_id, p."name" as product_name, p.scod,
+	i.actual_price, i.quantity, (i.actual_price * i.quantity) as summ, o.description
+	
+from orders o, items i, orders_operations_types ot, products p, products_groups pg
+where o.id = i.orders_id and o.operation_type_code = ot.type_code 
+	--and o.id < in_z_report_id and o.id > preZ 
+	and o.id < 529 and o.id > 0
+	and i.products_id = p.id 
+	and p.products_groups_id = pg.id
+	and o.operation_type_code = 'ppl'
+order by o.order_date)
+
+union 
+
+(select 2 as rang, 'Списание товара' as rang_descr,
+	o.id, o.order_date, o.operation_type_code, ot.description as operation_description,
+	pg.id as product_group_id , pg."name" as product_group_name, 
+	i.products_id as product_id, p."name" as product_name, p.scod,
+	i.actual_price, i.quantity, (i.actual_price * i.quantity) as summ, o.description
+
+from orders o, items i, orders_operations_types ot, products p, products_groups pg
+where o.id = i.orders_id and o.operation_type_code = ot.type_code 
+	--and o.id < in_z_report_id and o.id > preZ 
+	and o.id < 529 and o.id > 0
+	and i.products_id = p.id 
+	and p.products_groups_id = pg.id
+	and o.operation_type_code = 'pmn'
+order by o.order_date)
+
+union 
+
+(select 3 as rang, 'Продажа товара' as rang_descr,
+	o.id, o.order_date, o.operation_type_code, ot.description as operation_description,
+	pg.id as product_group_id , pg."name" as product_group_name, 
+	i.products_id as product_id, p."name" as product_name, p.scod,
+	i.actual_price, i.quantity, (i.actual_price * i.quantity) as summ, o.description
+
+from orders o, items i, orders_operations_types ot, products p, products_groups pg
+where o.id = i.orders_id and o.operation_type_code = ot.type_code 
+	--and o.id < in_z_report_id and o.id > preZ 
+	and o.id < 529 and o.id > 0
+	and i.products_id = p.id 
+	and p.products_groups_id = pg.id
+	and o.operation_type_code = 'psl'
+order by o.order_date)
+
+union 
+
+(select 4 as rang, 'Возврат товара' as rang_descr,
+	o.id, o.order_date, o.operation_type_code, ot.description as operation_description,
+	pg.id as product_group_id , pg."name" as product_group_name, 
+	i.products_id as product_id, p."name" as product_name, p.scod,
+	i.actual_price, i.quantity, (i.actual_price * i.quantity) as summ, o.description
+
+from orders o, items i, orders_operations_types ot, products p, products_groups pg
+where o.id = i.orders_id and o.operation_type_code = ot.type_code 
+	--and o.id < in_z_report_id and o.id > preZ 
+	and o.id < 529 and o.id > 0
+	and i.products_id = p.id 
+	and p.products_groups_id = pg.id
+	and o.operation_type_code = 'prt'
+order by o.order_date);

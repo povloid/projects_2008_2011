@@ -1,0 +1,57 @@
+public List<Questions> findQuestionsEntitiesForDeps(Deps dep) {
+        EntityManager em = getEntityManager();
+        try {
+            Query q = em.createQuery("select object(o) from Questions as o WHERE o.depId = :dep");
+            q.setParameter("dep", dep);
+
+            return q.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+
+public List<Questions> findQuestionsEntitiesForDeps(Deps dep, Deps fromDep) {
+        EntityManager em = getEntityManager();
+        try {
+            Query q = em.createQuery("select object(o) from Questions as o WHERE o.depId = :dep AND o.fromDepId=:fromDep");
+            q.setParameter("dep", dep);
+            q.setParameter("fromDep", fromDep);
+
+            return q.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+
+public List<Questions> findQuestionsEntitiesForDeps(Deps dep, Deps fromDep) {
+        EntityManager em = getEntityManager();
+        try {
+            Query q =
+                    em.createQuery("select object(o) from Questions as o " +
+                    "WHERE o.depId = :dep AND o.fromDepId=:fromDep");
+            q.setParameter("dep", dep);
+            q.setParameter("fromDep", fromDep);
+
+            return q.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+
+ public WebUsers findWebUsersEntityForName(String userName){
+        EntityManager em = getEntityManager();
+        try {
+            Query q = em.createQuery("select object(o) from WebUsers as o where o.userName=:userName");
+            q.setParameter("userName", userName);
+
+            return (WebUsers) q.getResultList().get(0);
+        } finally {
+            em.close();
+        }
+    }
+
+@SequenceGenerator(name="QUESTIONS_ID_SEQ", sequenceName="ips.questions_id_seq",allocationSize=1)
+@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="QUESTIONS_ID_SEQ")

@@ -1,0 +1,32 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega8</DEVICE>
+ <WORKING_DIR>D:\project\LCD8</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\Program Files\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\project\LCD8\LCD8.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\project\LCD8\m8def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\project\LCD8\LCD8.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>D:\project\LCD8\LCD8.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>D:\project\LCD8\LCD8.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>124</LINE></start>
+  <pau2000><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>270</LINE></pau2000>
+  <cout><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>194</LINE></cout>
+  <pau><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>256</LINE></pau>
+  <dout><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>202</LINE></dout>
+  <main><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>189</LINE></main>
+  <pout><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>212</LINE></pout>
+  <delay><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>277</LINE></delay>
+  <pau2><FILE>D:\project\LCD8\LCD8.asm</FILE><LINE>263</LINE></pau2>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    
+    <constant name="struts.multipart.parser" value="jakarta"/>
+    <constant name="struts.multipart.saveDir" value="/home/dev_sport/uploadFotos"/>
+    <constant name="struts.multipart.maxSize" value="10000000"/>
+    <constant name="struts.devMode" value="true"/>
+    
+    
+    <package name="disciples" namespace="/disciples" extends="struts-default">
+
+        <action name="sdeps">
+            <result>/op/sdeps/sdeps.jsp</result>
+        </action>
+        
+        <action name="addSdep" class="disciples.web.struts.EditSdep" method="add">
+            <result name="input">/op/sdeps/opSdep.jsp</result>
+        </action>
+
+        <action name="editSdep" class="disciples.web.struts.EditSdep" method="edit">
+            <result name="input">/op/sdeps/opSdep.jsp</result>
+        </action>
+
+        <action name="delSdep" class="disciples.web.struts.EditSdep" method="del">
+            <result name="input">/op/sdeps/opSdep.jsp</result>
+        </action>
+
+        <action name="opSdep" class="disciples.web.struts.EditSdep">
+            <result name="input">/op/sdeps/opSdep.jsp</result>
+            <result name="error">/op/sdeps/opSdep.jsp</result>
+            <result name="success" type="redirect">sdeps.action</result>
+        </action>
+
+
+        <action name="sclasses">
+            <result>/op/sclasses/sclasses.jsp</result>
+        </action>
+
+        <action name="addSclass" class="disciples.web.struts.EditSclass" method="add">
+            <result name="input">/op/sclasses/opSclass.jsp</result>
+        </action>
+
+        <action name="editSclass" class="disciples.web.struts.EditSclass" method="edit">
+            <result name="input">/op/sclasses/opSclass.jsp</result>
+        </action>
+
+        <action name="delSclass" class="disciples.web.struts.EditSclass" method="del">
+            <result name="input">/op/sclasses/opSclass.jsp</result>
+        </action>
+
+        <action name="opSclass" class="disciples.web.struts.EditSclass">
+            <result name="input">/op/sclasses/opSclass.jsp</result>
+            <result name="error">/op/sclasses/opSclass.jsp</result>
+            <result name="success" type="redirect">sclasses.action</result>
+        </action>
+
+
+        <action name="disciples">
+            <result>/op/disciples/disciples.jsp</result>
+        </action>
+
+        <action name="addDisciple" class="disciples.web.struts.EditDisciple" method="add">
+            <result name="input">/op/disciples/opDisciple.jsp</result>
+        </action>
+
+        <action name="editDisciple" class="disciples.web.struts.EditDisciple" method="edit">
+            <result name="input">/op/disciples/opDisciple.jsp</result>
+        </action>
+
+        <action name="delDisciple" class="disciples.web.struts.EditDisciple" method="del">
+            <result name="input">/op/disciples/opDisciple.jsp</result>
+        </action>
+
+        <action name="fotoUploadDisciple" class="disciples.web.struts.EditDisciple" method="fotoUpload">
+            <result name="input" type="redirect">/op/disciples/opDisciple.jsp</result>
+        </action>    
+
+
+        <action name="opDisciple" class="disciples.web.struts.EditDisciple">
+            <result name="input">/op/disciples/opDisciple.jsp</result>
+            <result name="error">/op/disciples/opDisciple.jsp</result>
+            <result name="success" type="redirect">disciples.action</result>
+        </action>
+
+        <action name="ph_chs">
+            <result>/op/ph_chs/ph_chs.jsp</result>
+        </action>
+
+
+        <action name="addPhCh" class="disciples.web.struts.EditPhCh" method="add">
+            <result name="input">/op/ph_chs/opPh_ch.jsp</result>
+        </action>
+
+        <action name="editPhCh" class="disciples.web.struts.EditPhCh" method="edit">
+            <result name="input">/op/ph_chs/opPh_ch.jsp</result>
+        </action>
+
+        <action name="delPhCh" class="disciples.web.struts.EditPhCh" method="del">
+            <result name="input">/op/ph_chs/opPh_ch.jsp</result>
+        </action>
+
+
+        <action name="opPhCh" class="disciples.web.struts.EditPhCh">
+            <result name="input">/op/ph_chs/opPh_ch.jsp</result>
+            <result name="error">/op/ph_chs/opPh_ch.jsp</result>
+            <result name="add">/op/ph_chs/opPh_ch.jsp</result>
+            <result name="edit">/op/ph_chs/opPh_ch.jsp</result>
+            <result name="del">/op/ph_chs/opPh_ch.jsp</result>
+            <result name="success" type="redirect">ph_chs.action</result>
+        </action>
+
+
+<!--        <action name="sp_trangs">
+            <result>/op/sp_trangs/sp_trangs.jsp</result>
+        </action>
+
+        <action name="addSpTrang" class="disciples.web.struts.EditSpTrang" method="add">
+            <result name="input">/op/sp_trangs/opSp_trang.jsp</result>
+        </action>
+
+        <action name="editSpTrang" class="disciples.web.struts.EditSpTrang" method="edit">
+            <result name="input">/op/sp_trangs/opSp_trang.jsp</result>
+        </action>
+
+        <action name="delSpTrang" class="disciples.web.struts.EditSpTrang" method="del">
+            <result name="input">/op/sp_trangs/opSp_trang.jsp</result>
+        </action>
+
+        <action name="opSpTrang" class="disciples.web.struts.EditSpTrang">
+            <result name="input">/op/sp_trangs/opSp_trang.jsp</result>
+            <result name="error">/op/sp_trangs/opSp_trang.jsp</result>
+            <result name="success" type="redirect">sp_trangs.action</result>
+        </action>-->
+
+
+        <action name="categories">
+            <result>/op/categories/categories.jsp</result>
+        </action>
+        
+        <action name="addCategory" class="disciples.web.struts.EditCategory" method="add">
+            <result name="input">/op/categories/opCategory.jsp</result>
+        </action>
+
+        <action name="editCategory" class="disciples.web.struts.EditCategory" method="edit">
+            <result name="input">/op/categories/opCategory.jsp</result>
+        </action>
+
+        <action name="delCategory" class="disciples.web.struts.EditCategory" method="del">
+            <result name="input">/op/categories/opCategory.jsp</result>
+        </action>
+
+        <action name="opCategory" class="disciples.web.struts.EditCategory">
+            <result name="input">/op/categories/opCategory.jsp</result>
+            <result name="error">/op/categories/opCategory.jsp</result>
+            <result name="success" type="redirect">categories.action</result>
+        </action>
+
+
+        <action name="measures">
+            <result>/op/measures/measures.jsp</result>
+        </action>
+
+        <action name="addMeasure" class="disciples.web.struts.EditMeasure" method="add">
+            <result name="input">/op/measures/opMeasure.jsp</result>
+        </action>
+
+        <action name="editMeasure" class="disciples.web.struts.EditMeasure" method="edit">
+            <result name="input">/op/measures/opMeasure.jsp</result>
+        </action>
+
+        <action name="delMeasure" class="disciples.web.struts.EditMeasure" method="del">
+            <result name="input">/op/measures/opMeasure.jsp</result>
+        </action>
+
+        <action name="opMeasure" class="disciples.web.struts.EditMeasure">
+            <result name="input">/op/measures/opMeasure.jsp</result>
+            <result name="error">/op/measures/opMeasure.jsp</result>
+            <result name="success" type="redirect">measures.action</result>
+        </action>
+
+ 
+        <action name="dsptcs">
+            <result>/op/dsptcs/dsptcs.jsp</result>
+        </action>
+
+        <action name="addDsptc" class="disciples.web.struts.EditDsptc" method="add">
+            <result name="input">/op/dsptcs/opDsptc.jsp</result>
+        </action>
+
+        <action name="editDsptc" class="disciples.web.struts.EditDsptc" method="edit">
+            <result name="input">/op/dsptcs/opDsptc.jsp</result>
+        </action>
+
+        <action name="delDsptc" class="disciples.web.struts.EditDsptc" method="del">
+            <result name="input">/op/dsptcs/opDsptc.jsp</result>
+        </action>
+
+        <action name="opDsptc" class="disciples.web.struts.EditDsptc">
+            <result name="input">/op/dsptcs/opDsptc.jsp</result>
+            <result name="error">/op/dsptcs/opDsptc.jsp</result>
+            <result name="add">/op/dsptcs/opDsptc.jsp</result>
+            <result name="edit">/op/dsptcs/opDsptc.jsp</result>
+            <result name="del">/op/dsptcs/opDsptc.jsp</result>
+            <result name="success" type="redirect">dsptcs.action</result>
+        </action>
+
+
+        <action name="sps">
+            <result>/op/sps/sps.jsp</result>
+        </action>
+        
+        <action name="addSp" class="disciples.web.struts.EditSp" method="add">
+            <result name="input">/op/sps/opSp.jsp</result>
+        </action>
+
+        <action name="editSp" class="disciples.web.struts.EditSp" method="edit">
+            <result name="input">/op/sps/opSp.jsp</result>
+        </action>
+
+        <action name="delSp" class="disciples.web.struts.EditSp" method="del">
+            <result name="input">/op/sps/opSp.jsp</result>
+        </action>
+
+        <action name="opSp" class="disciples.web.struts.EditSp">
+            <result name="input">/op/sps/opSp.jsp</result>
+            <result name="error">/op/sps/opSp.jsp</result>
+            <result name="add">/op/sps/opSp.jsp</result>
+            <result name="edit">/op/sps/opSp.jsp</result>
+            <result name="del">/op/sps/opSp.jsp</result>
+            <result name="success" type="redirect">sps.action</result>
+        </action>
+
+
+        
+
+        <action name="avscores">
+            <result>/op/avscores/avscores.jsp</result>
+        </action>
+        
+        <action name="editAvscore" class="disciples.web.struts.EditAvscore" method="edit">
+            <result name="input">/op/avscores/opAvscore.jsp</result>
+        </action>
+
+        <action name="opAvscore" class="disciples.web.struts.EditAvscore">
+            <result name="input">/op/avscores/opAvscore.jsp</result>
+            <result name="error">/op/avscores/opAvscore.jsp</result>
+            <result name="success" type="redirect">avscores.action</result>
+        </action>
+
+
+        <action name="rep_disciples">
+            <result>/rep/disciples/disciples.jsp</result>
+        </action>
+
+        <action name="rep_disciple">
+            <result>/rep/disciples/disciple.jsp</result>
+        </action>
+
+
+        <action name="foto">
+            <result>/Foto</result>
+        </action>
+
+        <action name="close_session">
+            <result>/CloseSession</result>
+        </action>
+
+    </package>
+</struts>

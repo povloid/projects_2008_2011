@@ -1,0 +1,1674 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EE297A3-3D43-4176-B13E-612C3A277D92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Workstation</RootNamespace>
+    <AssemblyName>Workstation</AssemblyName>
+    <ManifestCertificateThumbprint>F928523CC8B9D0EBFC2D4C6316E16D3A23CFAB08</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Workstation_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>G:\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Workstation.XML</DocumentationFile>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data3, Version=3.1.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="DevExpress.Utils3, Version=3.1.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="DevExpress.XtraBars3, Version=3.6.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="DevExpress.XtraEditors3, Version=3.1.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="DevExpress.XtraNavBar3, Version=2.6.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="DevExpress.XtraPrinting3, Version=1.11.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports3, Version=1.11.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\A\ABaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\A\ABaseControl.Designer.cs">
+      <DependentUpon>ABaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\A\ADialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\A\ADialog.Designer.cs">
+      <DependentUpon>ADialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdminingRoles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminingRoles.Designer.cs">
+      <DependentUpon>AdminingRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdminingUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminingUsers.Designer.cs">
+      <DependentUpon>AdminingUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdminingUsersInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminingUsersInfo.Designer.cs">
+      <DependentUpon>AdminingUsersInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\A\ARContainComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\A\ARContainComponentDialogC1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\A\ARContainComponentDialogC1.Designer.cs">
+      <DependentUpon>ARContainComponentDialogC1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\A\ARContainComponentDialogC2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\A\ARContainComponentDialogC2.Designer.cs">
+      <DependentUpon>ARContainComponentDialogC2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\A\AReferenceBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\A\AReferenceBook.Designer.cs">
+      <DependentUpon>AReferenceBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWork.Designer.cs">
+      <DependentUpon>DataWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\A\PButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\A\PHozFunction.cs" />
+    <Compile Include="Modules\A\AReferenceBooks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\A\AReferenceBooks.Designer.cs">
+      <DependentUpon>AReferenceBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWorkCompaignData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWorkCompaignData.Designer.cs">
+      <DependentUpon>DataWorkCompaignData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWorkCompaignInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWorkCompaignInfo.Designer.cs">
+      <DependentUpon>DataWorkCompaignInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWorkConsumer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWorkConsumer.Designer.cs">
+      <DependentUpon>DataWorkConsumer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWorkConsumerMainInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWorkConsumerMainInfo.Designer.cs">
+      <DependentUpon>DataWorkConsumerMainInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWorkFindConsumer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWorkFindConsumer.Designer.cs">
+      <DependentUpon>DataWorkFindConsumer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWorkQuestionsAndAnswers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWorkQuestionsAndAnswers.Designer.cs">
+      <DependentUpon>DataWorkQuestionsAndAnswers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWorksAddConsumer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWorksAddConsumer.Designer.cs">
+      <DependentUpon>DataWorksAddConsumer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataWorkSelectCampaign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\DataWorkSelectCampaign.Designer.cs">
+      <DependentUpon>DataWorkSelectCampaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBAddressBlocking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBAddressBlocking.Designer.cs">
+      <DependentUpon>RBAddressBlocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBAddressBlockingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBAddressBlockingDialog.Designer.cs">
+      <DependentUpon>RBAddressBlockingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBBrandFamily.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBBrandFamily.Designer.cs">
+      <DependentUpon>RBBrandFamily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBBrandFamilyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBBrandFamilyDialog.Designer.cs">
+      <DependentUpon>RBBrandFamilyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBBrands.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBBrands.Designer.cs">
+      <DependentUpon>RBBrands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBBrandsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBBrandsDialog.Designer.cs">
+      <DependentUpon>RBBrandsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaign.Designer.cs">
+      <DependentUpon>RBCompaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignCCMedia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignCCMedia.Designer.cs">
+      <DependentUpon>RBCompaignCCMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignCCPopulatedPoints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignCCPopulatedPoints.Designer.cs">
+      <DependentUpon>RBCompaignCCPopulatedPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignCCPrizes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignCCPrizes.Designer.cs">
+      <DependentUpon>RBCompaignCCPrizes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignCCQuestions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignCCQuestions.Designer.cs">
+      <DependentUpon>RBCompaignCCQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompaignDialog.Designer.cs">
+      <DependentUpon>RBCompaignDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompanyCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompanyCode.Designer.cs">
+      <DependentUpon>RBCompanyCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompanyCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBCompanyCodeDialog.Designer.cs">
+      <DependentUpon>RBCompanyCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBEmailBlocking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBEmailBlocking.Designer.cs">
+      <DependentUpon>RBEmailBlocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBEmailBlockingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBEmailBlockingDialog.Designer.cs">
+      <DependentUpon>RBEmailBlockingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBGlobalBlocking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBGlobalBlocking.Designer.cs">
+      <DependentUpon>RBGlobalBlocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBGlobalBlockingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBGlobalBlockingDialog.Designer.cs">
+      <DependentUpon>RBGlobalBlockingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBLanguage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBLanguage.Designer.cs">
+      <DependentUpon>RBLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBLanguageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBLanguageDialog.Designer.cs">
+      <DependentUpon>RBLanguageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBLengthCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBLengthCategory.Designer.cs">
+      <DependentUpon>RBLengthCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBLengthCategoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBLengthCategoryDialog.Designer.cs">
+      <DependentUpon>RBLengthCategoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBLoyalty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBLoyalty.Designer.cs">
+      <DependentUpon>RBLoyalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBLoyaltyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBLoyaltyDialog.Designer.cs">
+      <DependentUpon>RBLoyaltyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBMedia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBMedia.Designer.cs">
+      <DependentUpon>RBMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBMediaCluster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBMediaCluster.Designer.cs">
+      <DependentUpon>RBMediaCluster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBMediaClusterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBMediaClusterDialog.Designer.cs">
+      <DependentUpon>RBMediaClusterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBMediaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBMediaDialog.Designer.cs">
+      <DependentUpon>RBMediaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBMicrodistrict.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBMicrodistrict.Designer.cs">
+      <DependentUpon>RBMicrodistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBMicrodistrictDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBMicrodistrictDialog.Designer.cs">
+      <DependentUpon>RBMicrodistrictDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBMobilePhoneBlocking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBMobilePhoneBlocking.Designer.cs">
+      <DependentUpon>RBMobilePhoneBlocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBMobilePhoneBlockingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBMobilePhoneBlockingDialog.Designer.cs">
+      <DependentUpon>RBMobilePhoneBlockingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBOblast.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBOblast.Designer.cs">
+      <DependentUpon>RBOblast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBOblastDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBOblastDialog.Designer.cs">
+      <DependentUpon>RBOblastDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPackType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPackType.Designer.cs">
+      <DependentUpon>RBPackType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPackTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPackTypeDialog.Designer.cs">
+      <DependentUpon>RBPackTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPassportType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPassportType.Designer.cs">
+      <DependentUpon>RBPassportType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPassportTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPassportTypeDialog.Designer.cs">
+      <DependentUpon>RBPassportTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPhoneBlocking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPhoneBlocking.Designer.cs">
+      <DependentUpon>RBPhoneBlocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPhoneBlockingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPhoneBlockingDialog.Designer.cs">
+      <DependentUpon>RBPhoneBlockingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPopulatedPoints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPopulatedPoints.Designer.cs">
+      <DependentUpon>RBPopulatedPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPopulatedPointsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPopulatedPointsDialog.Designer.cs">
+      <DependentUpon>RBPopulatedPointsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPrizes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPrizes.Designer.cs">
+      <DependentUpon>RBPrizes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBPrizesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBPrizesDialog.Designer.cs">
+      <DependentUpon>RBPrizesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBQuestionTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBQuestionTypes.Designer.cs">
+      <DependentUpon>RBQuestionTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBQuestionTypesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBQuestionTypesDialog.Designer.cs">
+      <DependentUpon>RBQuestionTypesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBRegion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBRegion.Designer.cs">
+      <DependentUpon>RBRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBRegionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBRegionDialog.Designer.cs">
+      <DependentUpon>RBRegionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBResponceChanels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBResponceChanels.Designer.cs">
+      <DependentUpon>RBResponceChanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBResponceChanelsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBResponceChanelsDialog.Designer.cs">
+      <DependentUpon>RBResponceChanelsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBSettlementType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBSettlementType.Designer.cs">
+      <DependentUpon>RBSettlementType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBSettlementTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBSettlementTypeDialog.Designer.cs">
+      <DependentUpon>RBSettlementTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBSignatureType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBSignatureType.Designer.cs">
+      <DependentUpon>RBSignatureType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBSignatureTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBSignatureTypeDialog.Designer.cs">
+      <DependentUpon>RBSignatureTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBSpecialFlavorCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBSpecialFlavorCode.Designer.cs">
+      <DependentUpon>RBSpecialFlavorCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBSpecialFlavorCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBSpecialFlavorCodeDialog.Designer.cs">
+      <DependentUpon>RBSpecialFlavorCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQAnswers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQAnswers.Designer.cs">
+      <DependentUpon>RBsQAnswers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQAnswersDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQAnswersDialog.Designer.cs">
+      <DependentUpon>RBsQAnswersDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQQuestions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQQuestions.Designer.cs">
+      <DependentUpon>RBsQQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQQuestionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQQuestionsDialog.Designer.cs">
+      <DependentUpon>RBsQQuestionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQuestions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBsQuestions.Designer.cs">
+      <DependentUpon>RBsQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBStreet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBStreet.Designer.cs">
+      <DependentUpon>RBStreet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBStreetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBStreetDialog.Designer.cs">
+      <DependentUpon>RBStreetDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBStreetType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBStreetType.Designer.cs">
+      <DependentUpon>RBStreetType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBStreetTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBStreetTypeDialog.Designer.cs">
+      <DependentUpon>RBStreetTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBThicknessCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBThicknessCategory.Designer.cs">
+      <DependentUpon>RBThicknessCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\RBThicknessCategoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\RBThicknessCategoryDialog.Designer.cs">
+      <DependentUpon>RBThicknessCategoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RB\ReferencesBooksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RB\ReferencesBooksControl.Designer.cs">
+      <DependentUpon>ReferencesBooksControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UpdateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\UpdateDialog.Designer.cs">
+      <DependentUpon>UpdateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\YouAsUserInSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\YouAsUserInSystem.Designer.cs">
+      <DependentUpon>YouAsUserInSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\YouAsUserYouAdditionalInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\YouAsUserYouAdditionalInfo.Designer.cs">
+      <DependentUpon>YouAsUserYouAdditionalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\YouAsUserYouFoto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\YouAsUserYouFoto.Designer.cs">
+      <DependentUpon>YouAsUserYouFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\YouAsUserYouHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\YouAsUserYouHome.Designer.cs">
+      <DependentUpon>YouAsUserYouHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\YouAsUserYouWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\YouAsUserYouWork.Designer.cs">
+      <DependentUpon>YouAsUserYouWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavBarLookAndFeelMenu.cs" />
+    <Compile Include="phmkDataSet.cs">
+      <DependentUpon>phmkDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phmkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phmkDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\ABaseControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ABaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\ADialog.en.resx">
+      <DependentUpon>ADialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\ADialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ADialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdminingRoles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminingRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdminingUsers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminingUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdminingUsersInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminingUsersInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\ADialog.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ADialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\ARContainComponent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARContainComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\ARContainComponentDialogC1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARContainComponentDialogC1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\ARContainComponentDialogC2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARContainComponentDialogC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\AReferenceBook.en.resx">
+      <DependentUpon>AReferenceBook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\AReferenceBook.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AReferenceBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\AReferenceBook.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AReferenceBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWork.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\A\AReferenceBooks.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AReferenceBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWorkCompaignData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWorkCompaignData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWorkCompaignInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWorkCompaignInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWorkConsumer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWorkConsumer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWorkConsumerMainInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWorkConsumerMainInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWorkFindConsumer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWorkFindConsumer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWorkQuestionsAndAnswers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWorkQuestionsAndAnswers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWorksAddConsumer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWorksAddConsumer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataWorkSelectCampaign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataWorkSelectCampaign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBAddressBlocking.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBAddressBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBAddressBlocking.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBAddressBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBAddressBlockingDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBAddressBlockingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBBrandFamily.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBBrandFamily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBBrandFamily.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBBrandFamily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBBrandFamily.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBBrandFamily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBBrandFamilyDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBBrandFamilyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBBrands.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBBrands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBBrands.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBBrands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBBrandsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBBrandsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBCompaign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBCompaign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBCompaignCCMedia.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBCompaignCCMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBCompaignCCPopulatedPoints.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBCompaignCCPopulatedPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBCompaignCCPrizes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBCompaignCCPrizes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBCompaignCCQuestions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBCompaignCCQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBCompaignDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBCompaignDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBCompanyCode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBCompanyCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBCompanyCodeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBCompanyCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBEmailBlocking.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBEmailBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBEmailBlocking.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBEmailBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBEmailBlockingDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBEmailBlockingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBGlobalBlocking.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBGlobalBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBGlobalBlockingDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBGlobalBlockingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLanguage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLanguage.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLanguageDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLanguageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLengthCategory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLengthCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLengthCategory.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLengthCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLengthCategoryDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLengthCategoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLoyalty.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLoyalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLoyalty.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLoyalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBLoyaltyDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBLoyaltyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMedia.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMedia.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMediaCluster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMediaCluster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMediaCluster.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMediaCluster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMediaClusterDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMediaClusterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMediaDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMediaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMicrodistrict.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMicrodistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMicrodistrictDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMicrodistrictDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMobilePhoneBlocking.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMobilePhoneBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMobilePhoneBlocking.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMobilePhoneBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBMobilePhoneBlockingDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBMobilePhoneBlockingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBOblast.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBOblast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBOblast.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBOblast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBOblastDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBOblastDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPackType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPackType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPackType.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPackType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPackTypeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPackTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPassportType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPassportType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPassportType.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPassportType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPassportTypeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPassportTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPhoneBlocking.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPhoneBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPhoneBlocking.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPhoneBlocking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPhoneBlockingDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPhoneBlockingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPopulatedPoints.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPopulatedPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPopulatedPoints.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPopulatedPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPopulatedPointsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPopulatedPointsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPrizes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPrizes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPrizes.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPrizes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBPrizesDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBPrizesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBQuestionTypes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBQuestionTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBQuestionTypes.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBQuestionTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBQuestionTypesDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBQuestionTypesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBRegion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBRegion.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBRegionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBResponceChanels.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBResponceChanels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBResponceChanelsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBResponceChanelsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSettlementType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSettlementType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSettlementType.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSettlementType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSettlementTypeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSettlementTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSignatureType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSignatureType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSignatureType.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSignatureType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSignatureTypeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSignatureTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSpecialFlavorCode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSpecialFlavorCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSpecialFlavorCode.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSpecialFlavorCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBSpecialFlavorCodeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBSpecialFlavorCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBsQAnswers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBsQAnswers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBsQAnswers.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBsQAnswers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBsQAnswersDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBsQAnswersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBsQQuestions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBsQQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBsQQuestions.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBsQQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBsQQuestionsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBsQQuestionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBsQuestions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBsQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBStreet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBStreet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBStreet.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBStreet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBStreetDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBStreetDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBStreetType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBStreetType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBStreetType.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBStreetType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBStreetTypeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBStreetTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBThicknessCategory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBThicknessCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBThicknessCategory.ru.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBThicknessCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\RBThicknessCategoryDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RBThicknessCategoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RB\ReferencesBooksControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReferencesBooksControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UpdateDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UpdateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\YouAsUserInSystem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>YouAsUserInSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\YouAsUserYouAdditionalInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>YouAsUserYouAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\YouAsUserYouFoto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>YouAsUserYouFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\YouAsUserYouHome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>YouAsUserYouHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\YouAsUserYouWork.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>YouAsUserYouWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="phmkDataSet.xsc">
+      <DependentUpon>phmkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="phmkDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phmkDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="phmkDataSet.xss">
+      <DependentUpon>phmkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\about_16.png" />
+    <None Include="Resources\about_24.png" />
+    <None Include="Resources\about_32.png" />
+    <None Include="Resources\add_16.png" />
+    <None Include="Resources\add_24.png" />
+    <None Include="Resources\add_32.png" />
+    <None Include="Resources\addbk_16.png" />
+    <None Include="Resources\addbk_24.png" />
+    <None Include="Resources\addbk_32.png" />
+    <None Include="Resources\adfav_16.png" />
+    <None Include="Resources\adfav_24.png" />
+    <None Include="Resources\adfav_32.png" />
+    <None Include="Resources\apps_16.png" />
+    <None Include="Resources\apps_24.png" />
+    <None Include="Resources\apps_32.png" />
+    <None Include="Resources\back_16.png" />
+    <None Include="Resources\back_24.png" />
+    <None Include="Resources\back_32.png" />
+    <None Include="Resources\cal_16.png" />
+    <None Include="Resources\cal_24.png" />
+    <None Include="Resources\cal_32.png" />
+    <None Include="Resources\calc_16.png" />
+    <None Include="Resources\calc_24.png" />
+    <None Include="Resources\calc_32.png" />
+    <None Include="Resources\cancl_16.png" />
+    <None Include="Resources\cancl_24.png" />
+    <None Include="Resources\cancl_32.png" />
+    <None Include="Resources\cart_16.png" />
+    <None Include="Resources\cart_24.png" />
+    <None Include="Resources\cart_32.png" />
+    <None Include="Resources\cd_16.png" />
+    <None Include="Resources\cd_24.png" />
+    <None Include="Resources\cd_32.png" />
+    <None Include="Resources\chart_16.png" />
+    <None Include="Resources\chart_24.png" />
+    <None Include="Resources\chart_32.png" />
+    <None Include="Resources\close_16.png" />
+    <None Include="Resources\close_24.png" />
+    <None Include="Resources\close_32.png" />
+    <None Include="Resources\confg_16.png" />
+    <None Include="Resources\confg_24.png" />
+    <None Include="Resources\confg_32.png" />
+    <None Include="Resources\copy_16.png" />
+    <None Include="Resources\copy_24.png" />
+    <None Include="Resources\copy_32.png" />
+    <None Include="Resources\cut_16.png" />
+    <None Include="Resources\cut_24.png" />
+    <None Include="Resources\cut_32.png" />
+    <None Include="Resources\del_16.png" />
+    <None Include="Resources\del_24.png" />
+    <None Include="Resources\del_32.png" />
+    <None Include="Resources\docs_16.png" />
+    <None Include="Resources\docs_24.png" />
+    <None Include="Resources\docs_32.png" />
+    <None Include="Resources\down_16.png" />
+    <None Include="Resources\down_24.png" />
+    <None Include="Resources\down_32.png" />
+    <None Include="Resources\edit_16.png" />
+    <None Include="Resources\edit_24.png" />
+    <None Include="Resources\edit_32.png" />
+    <None Include="Resources\exp_16.png" />
+    <None Include="Resources\exp_24.png" />
+    <None Include="Resources\exp_32.png" />
+    <None Include="Resources\fastf_16.png" />
+    <None Include="Resources\fastf_24.png" />
+    <None Include="Resources\fastf_32.png" />
+    <None Include="Resources\favs_16.png" />
+    <None Include="Resources\favs_24.png" />
+    <None Include="Resources\favs_32.png" />
+    <None Include="Resources\fax_16.png" />
+    <None Include="Resources\fax_24.png" />
+    <None Include="Resources\fax_32.png" />
+    <None Include="Resources\flag_16.png" />
+    <None Include="Resources\flag_24.png" />
+    <None Include="Resources\flag_32.png" />
+    <None Include="Resources\foldr_16.png" />
+    <None Include="Resources\foldr_24.png" />
+    <None Include="Resources\foldr_32.png" />
+    <None Include="Resources\forwd_16.png" />
+    <None Include="Resources\forwd_24.png" />
+    <None Include="Resources\forwd_32.png" />
+    <None Include="Resources\games_16.png" />
+    <None Include="Resources\games_24.png" />
+    <None Include="Resources\games_32.png" />
+    <None Include="Resources\go_16.png" />
+    <None Include="Resources\go_24.png" />
+    <None Include="Resources\go_32.png" />
+    <None Include="Resources\group_16.png" />
+    <None Include="Resources\group_24.png" />
+    <None Include="Resources\hd_16.png" />
+    <None Include="Resources\hd_24.png" />
+    <None Include="Resources\hd_32.png" />
+    <None Include="Resources\help_16.png" />
+    <None Include="Resources\help_24.png" />
+    <None Include="Resources\help_32.png" />
+    <None Include="Resources\hist_16.png" />
+    <None Include="Resources\hist_24.png" />
+    <None Include="Resources\hist_32.png" />
+    <None Include="Resources\home_16.png" />
+    <None Include="Resources\home_24.png" />
+    <None Include="Resources\home_32.png" />
+    <None Include="Resources\image_16.png" />
+    <None Include="Resources\image_24.png" />
+    <None Include="Resources\image_32.png" />
+    <None Include="Resources\impt_16.png" />
+    <None Include="Resources\impt_24.png" />
+    <None Include="Resources\impt_32.png" />
+    <None Include="Resources\lgicn_16.png" />
+    <None Include="Resources\lgicn_24.png" />
+    <None Include="Resources\lgicn_32.png" />
+    <None Include="Resources\lock_16.png" />
+    <None Include="Resources\lock_24.png" />
+    <None Include="Resources\lock_32.png" />
+    <None Include="Resources\mail_16.png" />
+    <None Include="Resources\mail_24.png" />
+    <None Include="Resources\mail_32.png" />
+    <None Include="Resources\move_16.png" />
+    <None Include="Resources\move_24.png" />
+    <None Include="Resources\move_32.png" />
+    <None Include="Resources\music_16.png" />
+    <None Include="Resources\music_24.png" />
+    <None Include="Resources\music_32.png" />
+    <None Include="Resources\new_16.png" />
+    <None Include="Resources\new_24.png" />
+    <None Include="Resources\new_32.png" />
+    <None Include="Resources\notep_16.png" />
+    <None Include="Resources\notep_24.png" />
+    <None Include="Resources\notep_32.png" />
+    <None Include="Resources\ntwrk_16.png" />
+    <None Include="Resources\ntwrk_24.png" />
+    <None Include="Resources\ntwrk_32.png" />
+    <None Include="Resources\open_16.png" />
+    <None Include="Resources\open_24.png" />
+    <None Include="Resources\open_32.png" />
+    <None Include="Resources\opnbr_16.png" />
+    <None Include="Resources\opnbr_24.png" />
+    <None Include="Resources\opnbr_32.png" />
+    <None Include="Resources\opts_16.png" />
+    <None Include="Resources\opts_24.png" />
+    <None Include="Resources\opts_32.png" />
+    <None Include="Resources\paint_16.png" />
+    <None Include="Resources\paint_24.png" />
+    <None Include="Resources\paint_32.png" />
+    <None Include="Resources\paste_16.png" />
+    <None Include="Resources\paste_24.png" />
+    <None Include="Resources\paste_32.png" />
+    <None Include="Resources\pause_16.png" />
+    <None Include="Resources\pause_24.png" />
+    <None Include="Resources\pause_32.png" />
+    <None Include="Resources\phone_16.png" />
+    <None Include="Resources\phone_24.png" />
+    <None Include="Resources\phone_32.png" />
+    <None Include="Resources\picts_16.png" />
+    <None Include="Resources\picts_24.png" />
+    <None Include="Resources\picts_32.png" />
+    <None Include="Resources\play_16.png" />
+    <None Include="Resources\play_24.png" />
+    <None Include="Resources\play_32.png" />
+    <None Include="Resources\prefs_16.png" />
+    <None Include="Resources\prefs_24.png" />
+    <None Include="Resources\prefs_32.png" />
+    <None Include="Resources\print_16.png" />
+    <None Include="Resources\print_24.png" />
+    <None Include="Resources\print_32.png" />
+    <None Include="Resources\prtpv_16.png" />
+    <None Include="Resources\prtpv_24.png" />
+    <None Include="Resources\prtpv_32.png" />
+    <None Include="Resources\redo_16.png" />
+    <None Include="Resources\redo_24.png" />
+    <None Include="Resources\redo_32.png" />
+    <None Include="Resources\ref_16.png" />
+    <None Include="Resources\ref_24.png" />
+    <None Include="Resources\ref_32.png" />
+    <None Include="Resources\remov_16.png" />
+    <None Include="Resources\remov_24.png" />
+    <None Include="Resources\remov_32.png" />
+    <None Include="Resources\rewnd_16.png" />
+    <None Include="Resources\rewnd_24.png" />
+    <None Include="Resources\rewnd_32.png" />
+    <None Include="Resources\savas_16.png" />
+    <None Include="Resources\savas_24.png" />
+    <None Include="Resources\savas_32.png" />
+    <None Include="Resources\save_16.png" />
+    <None Include="Resources\save_24.png" />
+    <None Include="Resources\save_32.png" />
+    <None Include="Resources\sinfo_16.png" />
+    <None Include="Resources\sinfo_24.png" />
+    <None Include="Resources\sinfo_32.png" />
+    <None Include="Resources\skipb_16.png" />
+    <None Include="Resources\skipb_24.png" />
+    <None Include="Resources\skipb_32.png" />
+    <None Include="Resources\skipf_16.png" />
+    <None Include="Resources\skipf_24.png" />
+    <None Include="Resources\skipf_32.png" />
+    <None Include="Resources\smicn_16.png" />
+    <None Include="Resources\smicn_24.png" />
+    <None Include="Resources\smicn_32.png" />
+    <None Include="Resources\splay_16.png" />
+    <None Include="Resources\splay_24.png" />
+    <None Include="Resources\splay_32.png" />
+    <None Include="Resources\srch_16.png" />
+    <None Include="Resources\srch_24.png" />
+    <None Include="Resources\srch_32.png" />
+    <None Include="Resources\stop_16.png" />
+    <None Include="Resources\stop_24.png" />
+    <None Include="Resources\stop_32.png" />
+    <None Include="Resources\timer_16.png" />
+    <None Include="Resources\timer_24.png" />
+    <None Include="Resources\timer_32.png" />
+    <None Include="Resources\tools_16.png" />
+    <None Include="Resources\tools_24.png" />
+    <None Include="Resources\tools_32.png" />
+    <None Include="Resources\trash_16.png" />
+    <None Include="Resources\trash_24.png" />
+    <None Include="Resources\trash_32.png" />
+    <None Include="Resources\ulock_16.png" />
+    <None Include="Resources\ulock_24.png" />
+    <None Include="Resources\ulock_32.png" />
+    <None Include="Resources\undo_16.png" />
+    <None Include="Resources\undo_24.png" />
+    <None Include="Resources\undo_32.png" />
+    <None Include="Resources\up_16.png" />
+    <None Include="Resources\up_24.png" />
+    <None Include="Resources\up_32.png" />
+    <None Include="Resources\user_16.png" />
+    <None Include="Resources\user_24.png" />
+    <None Include="Resources\user_32.png" />
+    <None Include="Resources\web_16.png" />
+    <None Include="Resources\web_24.png" />
+    <None Include="Resources\web_32.png" />
+    <None Include="Resources\wiz_16.png" />
+    <None Include="Resources\wiz_24.png" />
+    <None Include="Resources\wiz_32.png" />
+    <None Include="Resources\zoomi_16.png" />
+    <None Include="Resources\zoomi_24.png" />
+    <None Include="Resources\zoomi_32.png" />
+    <None Include="Resources\zoomo_16.png" />
+    <None Include="Resources\zoomo_24.png" />
+    <None Include="Resources\zoomo_32.png" />
+    <None Include="Resources\kdf_16.PNG" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\kthememgr.png" />
+    <None Include="Resources\package.png" />
+    <None Include="Resources\kfm2.png" />
+    <None Include="Resources\pda_blue.png" />
+    <None Include="Resources\laptop.png" />
+    <None Include="Resources\ipod_unmount.png" />
+    <None Include="Resources\kontact_todo.png" />
+    <None Include="Resources\xmag.png" />
+    <None Include="Resources\filetypes.png" />
+    <None Include="Resources\group_32.png" />
+    <Content Include="tmp.txt" />
+    <Content Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ADODB">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data3">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data3.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils3">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils3.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars3">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars3.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors3">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors3.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar3">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar3.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting3">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting3.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports3">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports3.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler3">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler3.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="en\Workstation.resources">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms.xml">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\Workstation.resources">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Workstation.pdb">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

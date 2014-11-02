@@ -1,0 +1,202 @@
+/*
+ * After modifying this style sheet, refresh the page being designed to see the effect of the modification.
+ * Click the Refresh button in the Visual Designer toolbar to refresh the page.
+ */ 
+
+/* Style rules to make Java Server faces Standarad data tables look better */
+
+.toolbar{
+    
+    
+    
+    background-image: url(images/snow_ridge.png);
+}
+
+/*** ALB ***/
+.docstable {
+    color: #333333; font-size:10px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+}
+
+.tblheader {
+    background-color:#CAD7F0;
+    color:#000000;
+    font-weight:bold;
+    padding:3px;
+    font-size: 11px;
+}
+
+.tbltd1 {
+    background-color:#F2F2F2;
+    padding:3px;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.tbltd2 {
+    background-color:#E2E2E2;
+    padding:3px;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.tbltd1-w1 {
+    
+    padding:3px;
+    font-size: 11px;
+    background-color:#ffcc66;
+    padding:3px;
+    vertical-align: middle;
+}
+
+.tbltd1-w1-2 {
+    
+    padding:3px;
+    font-size: 11px;
+    background-color:#Efbc56;
+    padding:3px;
+    vertical-align: middle;
+}
+
+/*** ALB ***/
+
+
+.header {
+    background-color: #c6deeb;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+
+
+.list-header {
+  background-color: #eeeeee;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.list-paging-header {
+  background-color: white;
+}
+
+.list-paging-footer {
+  background-color: white;
+}
+
+.list-row-even { 
+}
+
+.list-row-odd { 
+  background-color: #eeeeee;
+}
+
+/* Style rules for message severity levels */
+
+.infoMessage {
+  color: black;
+}
+
+.warnMessage {
+  color: orange;
+  font-weight: bold;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: bold;
+}
+
+.fatalMessage {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.buttonStyle {
+
+    border-top-style: double;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border-bottom-style: double;
+    border-left-style: double;
+    border-right-style: double;
+    background-repeat: inherit;
+}
+
+.pcaption{
+    background-image: url(images/caption.gif);
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #ffffff;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.pcaptioncaption{
+
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.p2{
+    background-image: url(images/caption.gif);
+    
+}
+
+body {
+    
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.input-form{
+
+    background-color: #bcddfe;
+    border-right-style: outset;
+    border-left-style: outset;
+    border-bottom-style: outset;
+    border-top-style: outset;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-right-color: #666666;
+    border-left-color: #666666;
+    border-bottom-color: #666666;
+    border-top-color: #666666;
+    background-image: url(images/snow_ridge.png);
+}
+
+.qtable {
+
+
+}
+
+.qtable-cell {
+
+    background-color: #ffffff;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+}
+
+.group-cell{
+    
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    background-color: #ffffcc;
+}

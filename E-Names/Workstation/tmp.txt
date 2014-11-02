@@ -1,0 +1,80 @@
+// 
+// comboBox1
+// 
+            bRANDFAMILYComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.brandsBindingSource, "BRANDFAMILY", true));
+            bRANDFAMILYComboBox.DataSource = this.brandfamilyBindingSource;
+            bRANDFAMILYComboBox.DisplayMember = "DESCR";
+            bRANDFAMILYComboBox.FormattingEnabled = true;
+            bRANDFAMILYComboBox.ValueMember = "PMCODE";
+            
+            cOMPANYCODEComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.brandsBindingSource, "BRANDFAMILY", true));
+            cOMPANYCODEComboBox.DataSource = this.brandfamilyBindingSource;
+            cOMPANYCODEComboBox.DisplayMember = "DESCR";
+            cOMPANYCODEComboBox.FormattingEnabled = true;
+            cOMPANYCODEComboBox.ValueMember = "PMCODE";
+            
+            COMPANYCODE
+                        // 
+            // bRANDFAMILYComboBox
+            // 
+            this.bRANDFAMILYComboBox.FormattingEnabled = true;
+            this.bRANDFAMILYComboBox.Location = new System.Drawing.Point(108, 25);
+            this.bRANDFAMILYComboBox.Name = "bRANDFAMILYComboBox";
+            this.bRANDFAMILYComboBox.Size = new System.Drawing.Size(346, 21);
+            this.bRANDFAMILYComboBox.TabIndex = 32;
+            // 
+            // cOMPANYCODEComboBox
+            // 
+            this.cOMPANYCODEComboBox.FormattingEnabled = true;
+            this.cOMPANYCODEComboBox.Location = new System.Drawing.Point(329, 183);
+            this.cOMPANYCODEComboBox.Name = "cOMPANYCODEComboBox";
+            this.cOMPANYCODEComboBox.Size = new System.Drawing.Size(125, 21);
+            this.cOMPANYCODEComboBox.TabIndex = 33;
+            // 
+            
+            
+
+
+			// 
+            // mARKBCNumericUpDown
+            // 
+            this.mARKBCNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bRANDSBindingSource, "MARKBC", true));
+            this.mARKBCNumericUpDown.Maximum = new decimal(new int[] {1410065407,2,0,0});
+            this.mARKBCNumericUpDown.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            // 
+            // fILTINDCheckBox
+            // 
+            this.fILTINDCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bRANDSBindingSource, "FILTIND", true));
+            
+            
+            this.mARKBCMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bRANDSBindingSource, "MARKBC", true));
+            
+            this.mARKBCMaskedTextBox.Mask = "00000-9999";
+            
+            
+            
+            // 
+            // mARKBCMaskedTextBox
+            // 
+            this.mARKBCMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bRANDSBindingSource, "MARKBC", true));
+            this.mARKBCMaskedTextBox.Location = new System.Drawing.Point(325, 276);
+            this.mARKBCMaskedTextBox.Mask = "00/00/0000 90:00";
+            this.mARKBCMaskedTextBox.Name = "mARKBCMaskedTextBox";
+            this.mARKBCMaskedTextBox.Size = new System.Drawing.Size(64, 20);
+            this.mARKBCMaskedTextBox.TabIndex = 16;
+            this.mARKBCMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            
+            
+            // 
+            // bRANDFAMILYComboBox
+            // 
+            this.bRANDFAMILYComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bRANDSBindingSource, "BRANDFAMILY", true));
+            this.bRANDFAMILYComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bRANDSBindingSource, "BRANDFAMILY", true));
+            this.bRANDFAMILYComboBox.DataSource = this.bRANDFAMILYBindingSource;
+            this.bRANDFAMILYComboBox.DisplayMember = "DESCR";
+            this.bRANDFAMILYComboBox.FormattingEnabled = true;
+            this.bRANDFAMILYComboBox.ValueMember = "PMCODE";

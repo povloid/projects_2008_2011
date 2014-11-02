@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+
+
+    <constant name="struts.convention.result.path" value="/pages"/>
+    <constant name="struts.convention.action.packages" value="example2.p2,example2.p3"/>
+    <!-- constant name="struts.convention.default.parent.package" value="example2"/ -->
+    
+    <package name="example" namespace="/example" extends="struts-default,json-default">
+
+        
+
+
+
+
+        <!--action name="ExampleForm2">
+            <result>/example2/ExampleForm2.jsp</result>
+        </action-->
+
+
+        <action name="ExampleForm2" class="example2.ExampleForm2">
+            <result name="input">/example2/ExampleForm2.jsp</result>
+            <result name="error">/example2/ExampleForm2.jsp</result>
+            <result name="success">/example2/ExampleForm2.jsp</result>
+        </action>
+
+    </package>
+    
+    
+    <!-- package name="showcase" extends="struts-default,json-default" namespace="/">
+        
+        
+    </package -->
+
+</struts>
+

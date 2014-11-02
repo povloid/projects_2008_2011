@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+
+
+
+    <form-beans>
+        <form-bean name="BoxOpActionForm" type="ips.dwh.op.boxes.BoxOpActionForm"/>
+        <form-bean name="SectionOpActionForm" type="ips.dwh.op.sections.SectionOpActionForm"/>
+        <form-bean name="AddFileActionForm" type="ips.dwh.op.addfile.AddFileActionForm"/>
+    
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <!-- forward name="search"  path="/Search.do"/-->
+        <!-- forward name="datawork"  path="/DataWork.do"/-->
+        <!-- forward name="addfile"  path="/AddFile.do" /-->
+        <!-- forward name="opSection"  path="/OpSection.do"/-->
+        <!-- forward name="logon" path="/logon.jsp" redirect="false"/ -->
+
+    </global-forwards>
+   
+    <action-mappings>
+
+        <!--action path="/AddFile" forward="/dw/addFile.jsp"/ -->
+
+        <action input="/dw/addFile.jsp" name="AddFileActionForm"
+        path="/AddFile" scope="session"
+        type="ips.dwh.op.addfile.AddFileAction" validate="true">
+
+            <forward name="failure" path="/dw/addFile.jsp" redirect="true"/>
+            <forward name="success" path="/dw/addFile.jsp" redirect="true"/>
+        </action>
+
+        <action path="/Search" forward="/sch/search.jsp"/>
+        <action path="/DataWork" forward="/dw/dw_main.jsp"/>
+
+        <action path="/OpSection" forward="/dw/op/sectionOp.jsp"/>
+
+        <action input="/dw/op/sectionOp.jsp" name="SectionOpActionForm"
+        path="/AOpSection" scope="request"
+        type="ips.dwh.op.sections.SectionOpStrutsAction" validate="true">
+
+            <forward name="failure" path="/OpSection.do" redirect="true"/>
+            <forward name="success" path="/DataWork.do" redirect="true"/>
+        </action>
+
+        <action path="/OpBox" forward="/dw/op/boxOp.jsp"/>
+
+        <action input="/dw/op/boxOp.jsp" name="BoxOpActionForm"
+        path="/AOpBox" scope="request"
+        type="ips.dwh.op.boxes.BoxOpStrutsAction" validate="true">
+            <forward name="failure" path="/OpSection.do" redirect="true"/>
+            <forward name="success" path="/DataWork.do" redirect="true"/>
+        </action>
+
+        <action input="/" name="CopyToBuffer" path="/CopyToBuffer" scope="session" type="ips.dwh.buffer.CopyToBufferStrutsAction">
+            <forward name="success" path="/DataWork.do" redirect="true"/>
+        </action>
+
+        <action input="/" name="PasteFromBuffer" path="/PasteFromBuffer" scope="session" type="ips.dwh.buffer.PasteFromBufferStrutsAction">
+            <forward name="success" path="/DataWork.do" redirect="true"/>
+        </action>
+
+        <action input="/" name="PresentBox" path="/PresentBox" scope="request" type="ips.dwh.present.box.PresentBoxStrutsAction"/>
+
+    </action-mappings>
+
+
+
+
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor" maxFileSize="10000M"/>
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

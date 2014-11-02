@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_20" class="java.beans.XMLDecoder"> 
+ <object class="tradeterminal.conf.AppLookAndFeelSettings"> 
+  <void property="laf"> 
+   <string>com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel</string> 
+  </void> 
+ </object> 
+</java> 

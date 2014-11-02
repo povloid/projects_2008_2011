@@ -1,0 +1,201 @@
+.style-0 {
+    font-family: 'Arial Unicode MS';
+    font-size: 16pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+    text-align: center;
+}
+
+.style-1 {
+    font-family: serif;
+    font-size: 10pt;
+    color: #000000;
+    text-align: left;
+}
+
+.style-2 {
+    font-family: serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+}
+
+.style-3 {
+    font-family: serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.style-4 {
+    font-family: monospaced;
+    font-size: 9pt;
+    color: #000000;
+    text-align: right;
+}
+
+.style-5 {
+    font-family: monospaced;
+    font-size: 9pt;
+    color: #000000;
+    text-align: center;
+}
+
+.style-6 {
+    font-family: monospaced;
+    font-size: 9pt;
+    color: #000000;
+    text-align: left;
+}
+
+.style-7 {
+    font-family: monospaced;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.style-8 {
+    font-family: monospaced;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #000000;
+    text-align: right;
+}
+
+td.cell-style-0 {
+    font-size: 1pt; vertical-align:top;
+}
+
+td.cell-style-1 {
+    font-size: 1pt; vertical-align:middle;
+}
+
+td.cell-style-10 {
+    font-size: 1pt;
+    border-top-width: 1.0pt;
+    border-top-style: solid;
+    border-top-color: #000000;
+    vertical-align: top;
+}
+
+td.cell-style-11 {
+    font-size: 1pt;
+    border-top-width: 1.0pt;
+    border-top-style: solid;
+    border-top-color: #000000;
+    vertical-align: top;
+}
+
+td.cell-style-12 {
+    font-size: 1pt;
+    background-color: #dfdfdf;
+    border-top-width: 1.0pt;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+    vertical-align: top;
+}
+
+td.cell-style-2 {
+    font-size: 1pt; vertical-align:top;
+}
+
+td.cell-style-3 {
+    font-size: 1pt;
+    border-top-width: 1.0pt;
+    border-top-style: solid;
+    border-top-color: #000000;
+    vertical-align: middle;
+}
+
+td.cell-style-4 {
+    font-size: 1pt;
+    vertical-align: top;
+}
+
+td.cell-style-5 {
+    font-size: 1pt;
+    background-color: #dfdfdf;
+    border-top-width: 1.0pt;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+    border-left-width: 1.0pt;
+    border-left-style: solid;
+    border-left-color: #dfdfdf;
+    vertical-align: middle;
+}
+
+td.cell-style-6 {
+    font-size: 1pt;
+    background-color: #dfdfdf;
+    border-top-width: 1.0pt;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+    vertical-align: middle;
+}
+
+td.cell-style-7 {
+    font-size: 1pt;
+    border-left-width: 1.0pt;
+    border-left-style: solid;
+    border-left-color: #dfdfdf;
+    vertical-align: top;
+}
+
+td.cell-style-8 {
+    font-size: 1pt;
+    border-top-width: 1.0pt;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+    vertical-align: top;
+}
+
+td.cell-style-9 {
+    font-size: 1pt;
+    vertical-align: top;
+}
+
+tr.row-style-0 {
+    height: 90pt;
+}
+
+tr.row-style-1 {
+    height: 1pt;
+}
+
+tr.row-style-2 {
+    height: 19pt;
+}
+
+tr.row-style-3 {
+    height: 18pt;
+}
+
+tr.row-style-4 {
+    height: 22pt;
+}
+
+tr.row-style-5 {
+    height: 14pt;
+}
+
+tr.row-style-6 {
+    height: 6pt;
+}
+
+tr.row-style-7 {
+    height: 20pt;
+}
+
+tr.row-style-8 {
+    height: 40pt;
+}
+
+tr.row-style-9 {
+    height: 60pt;
+}
+

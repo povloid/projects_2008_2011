@@ -1,0 +1,75 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+
+<!-- Author: kopychenko -->
+
+<struts>
+    <constant name="struts.multipart.maxSize" value="20000000" />
+
+
+    <package name="prbase" namespace="/prbase" extends="struts-default">
+
+
+        <action name="listperson">
+            <result>/dw/op/listperson.jsp</result>
+        </action>
+
+        <action name="plist">
+            <result>/views/plist.jsp</result>
+        </action>
+
+        <action name="main">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="addPerson" class="ips.prbase.struts.OpPerson" method="addPerson">
+            <result name="input">/dw/op/opperson.jsp</result>
+        </action>
+
+        <action name="editPerson" class="ips.prbase.struts.OpPerson" method="editPerson">
+            <result name="input">/dw/op/opperson.jsp</result>
+        </action>
+
+        <action name="opperson" class="ips.prbase.struts.OpPerson">
+            <result name="input">/dw/op/opperson.jsp</result>
+            <result name="error">/dw/op/opperson.jsp</result>
+            <result name="success" type="redirect">listperson.action</result>
+        </action>
+
+        <action name="getPersonFoto">
+            <result>/GetPersonFoto</result>
+        </action>
+
+        <action name="RepPerson">
+            <result>/RepPerson</result>
+        </action>
+
+        <action name="R1">
+            <result>/R1</result>
+        </action>
+
+
+        <action name="psearch">
+            <result>/views/psearch.jsp</result>
+        </action>
+
+        <action name="apsearch" class="ips.prbase.struts.PSearch">
+            <result name="input">/views/psearch.jsp</result>
+            <result name="error">/views/psearch.jsp</result>
+            <result>/views/psearch.jsp</result>
+        </action>
+
+        <action name="pview" class="ips.prbase.struts.OpPerson" method="editPerson">
+             <result name="input">/views/pview.jsp</result>
+            <result>/views/pview.jsp</result>
+        </action>
+
+        <action name="close_session">
+            <result>/CloseSession</result>
+        </action>
+
+    </package>
+</struts>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="manager" namespace="/manager" extends="struts-default">
+
+
+
+        <action name="users">
+            <result>/dw/users.jsp</result>
+        </action>
+
+        <action name="addUser" class="manager_app.struts.EditUser" method="add">
+            <result name="input">/dw/opUser.jsp</result>
+        </action>
+        
+        <action name="editUser" class="manager_app.struts.EditUser" method="edit">
+            <result name="input">/dw/opUser.jsp</result>
+        </action>
+
+        <action name="delUser" class="manager_app.struts.EditUser" method="del">
+            <result name="input">/dw/opUser.jsp</result>
+        </action>
+
+        <action name="opUser" class="manager_app.struts.EditUser">
+            <result name="input">/dw/opUser.jsp</result>
+            <result name="error">/dw/opUser.jsp</result>
+            <result name="success" type="redirect">users.action</result>
+        </action>
+
+
+        <action name="roles">
+            <result>/dw/roles.jsp</result>
+        </action>
+
+        <action name="addRole" class="manager_app.struts.EditRole" method="add">
+            <result name="input">/dw/opRole.jsp</result>
+        </action>
+                
+        <action name="editRole" class="manager_app.struts.EditRole" method="edit">
+            <result name="input">/dw/opRole.jsp</result>
+        </action>
+
+        <action name="delRole" class="manager_app.struts.EditRole" method="del">
+            <result name="input">/dw/opRole.jsp</result>
+        </action>
+
+        <action name="opRole" class="manager_app.struts.EditRole">
+            <result name="input">/dw/opRole.jsp</result>
+            <result name="error">/dw/opRole.jsp</result>
+            <result name="success" type="redirect">roles.action</result>
+        </action>
+
+
+
+        <action name="deps">
+            <result>/dw/deps.jsp</result>
+        </action>
+
+        <action name="addDep" class="manager_app.struts.EditDep" method="add">
+            <result name="input">/dw/opDep.jsp</result>
+        </action>
+
+        <action name="editDep" class="manager_app.struts.EditDep" method="edit">
+            <result name="input">/dw/opDep.jsp</result>
+        </action>
+
+        <action name="delDep" class="manager_app.struts.EditDep" method="del">
+            <result name="input">/dw/opDep.jsp</result>
+        </action>
+
+        <action name="opDep" class="manager_app.struts.EditDep">
+            <result name="input">/dw/opDep.jsp</result>
+            <result name="error">/dw/opDep.jsp</result>
+            <result name="success" type="redirect">deps.action</result>
+        </action>
+
+
+        <action name="close_session">
+            <result>/CloseSession</result>
+        </action>
+
+    </package>
+</struts>
